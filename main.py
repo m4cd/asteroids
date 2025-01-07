@@ -40,15 +40,14 @@ def main():
 
             for s in shots:
                 if a.collides(s):
-                    a.kill()
+                    a.split()
                     s.kill()
 
         screen.fill(color=(0,0,0))
         
         for d in drawable:
             d.draw(screen)
-        #player.draw(screen)
-        #player.update(dt)
+        
         pygame.display.flip()
         dt = clock.tick(60) / 1000
 
